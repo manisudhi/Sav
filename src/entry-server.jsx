@@ -5,7 +5,7 @@ import App from './App';
 /** Renders a single route to an HTML string at build time. */
 export function render(url) {
   return renderToString(
-    <StaticRouter basename="/BBA-Project-" location={url}>
+    <StaticRouter basename="/Sav" location={url}>
       <App />
     </StaticRouter>
   );
