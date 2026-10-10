@@ -33,6 +33,12 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Verify built website
+        run: |
+          test -f dist/index.html
+          grep -q '/Sav/assets/' dist/index.html
+          ! grep -q '/src/main.jsx' dist/index.html
+
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
