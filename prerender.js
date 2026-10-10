@@ -29,7 +29,7 @@ let written = 0;
 
 for (const route of routes) {
   const meta = pageMeta[route];
-  const appHtml = render(route);
+  const appHtml = render(route === '/' ? '/Sav/' : `/Sav${route}`);
 
   let html = template
     .replace('<!--app-html-->', appHtml)
